@@ -1,9 +1,5 @@
 # Stock Price Time Series Forecasting with LSTM: Facebook (FB) and IBM
 
-## GitHub Repository Title
-**Stock Price Forecasting Using LSTM — Facebook (FB) & IBM**
-
-## Repository Description
 Time series forecasting of historical Facebook (FB) and IBM stock closing prices using Persistence Baselines, Baseline LSTM, and Modified LSTM. Includes exploratory data analysis, preprocessing, chronological train-validation-test splitting, model training, visualizations, and evaluation with RMSE, MAE, and MAPE.
 
 ---
@@ -25,8 +21,6 @@ The notebook compares three approaches:
 2. **Baseline LSTM** — a simple LSTM neural network.
 3. **Modified LSTM** — a modified LSTM architecture and training configuration.
 
-> **Scope note:** The notebook uses historical closing prices only. This is an educational forecasting experiment, not a trading strategy or financial recommendation.
-
 ## Objectives
 
 - Explore the historical behavior and distribution of FB and IBM closing prices.
@@ -43,8 +37,6 @@ The notebook uses two stock time series:
 - **IBM:** historical closing prices from the provided dataset.
 
 The notebook selects the `Date` and `Close` columns. `Date` is converted to datetime and used to preserve chronological order; `Close` is the forecasting feature and target.
-
-**Dataset files are not included in this repository by default.** Add the original datasets or update the notebook's data-loading paths before running it. Make sure you have the right to redistribute any dataset you upload.
 
 ## Methodology
 
@@ -96,8 +88,6 @@ For all three metrics, **lower values indicate smaller prediction errors**.
 
 ## Results
 
-The table below summarizes the reported test-set results in the notebook. Values are in the original price scale, except MAPE.
-
 | Metric | Persistence FB | Persistence IBM | Baseline LSTM FB | Baseline LSTM IBM | Modified LSTM FB | Modified LSTM IBM |
 |---|---:|---:|---:|---:|---:|---:|
 | RMSE | 4.1735 | 2.6892 | 5.4912 | **2.6634** | 5.5691 | 3.5302 |
@@ -112,16 +102,6 @@ The table below summarizes the reported test-set results in the notebook. Values
 - The results illustrate that a more complex neural network does not necessarily outperform a simple forecasting baseline.
 - The Modified LSTM results suggest that the tested architecture and training settings may not be well suited to these datasets. This is an empirical finding, not proof that LSTM models are inherently unsuitable for stock forecasting.
 
-## Repository Structure
-
-```text
-.
-├── Time Forecasting FB dan IBM (LSTM).ipynb
-└── README.md
-```
-
-If you add the datasets, consider placing them in a `data/` directory and documenting their source and usage terms.
-
 ## Requirements
 
 The notebook uses Python and common data science libraries, including:
@@ -132,28 +112,6 @@ The notebook uses Python and common data science libraries, including:
 - scikit-learn
 - TensorFlow / Keras
 - Jupyter Notebook
-
-Install the main dependencies with:
-
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn tensorflow jupyter
-```
-
-Library versions may affect reproducibility. For more consistent results, record the versions used in your environment.
-
-## How to Run
-
-1. Clone or download this repository.
-2. Ensure the source datasets are available and update the file paths in the notebook if needed.
-3. Install the required libraries.
-4. Open the notebook:
-
-   ```bash
-   jupyter notebook "Time Forecasting FB dan IBM (LSTM).ipynb"
-   ```
-
-5. Run the notebook cells in order.
-6. Review the EDA, training curves, predictions, gap analyses, and evaluation tables.
 
 ## Limitations
 
@@ -172,9 +130,6 @@ Subject to the assignment requirements, future work could include:
 - Comparing models using the same data split and evaluation procedure.
 - Adding features such as Open, High, Low, and Volume only if permitted and available at prediction time.
 
-## Author
-
-**Angelyn Nathasya Br Marpaung**
 
 Data Science student — BINUS University
 
