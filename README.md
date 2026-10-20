@@ -11,9 +11,7 @@ This project explores time series forecasting using historical stock closing pri
 The project follows the assignment constraints:
 - **Input window size:** 5 observations
 - **Forecast horizon:** 1 observation
-- **Training/validation split:** 90% training and 10% validation, in chronological order
-- **Test set:** the final year of observations
-- **Input feature:** `Close`
+- **Training/validation split:** 90% training and 10% validation
 - **Target:** next observation's closing price
 
 The notebook compares three approaches:
